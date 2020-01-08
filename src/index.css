@@ -1,0 +1,112 @@
+/* ===== READ ME! MAIN STYLE FOR THEME/APP ===== ===== ===== ===== ===== ===== === */
+/* index.css is used for primary styling for the overall theme.  Styles could also
+later be applied as a theme using React Context.  Individual pages (Routes) &
+Components should be placed in their own directories with stylesheets for each. */
+/* ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== = */
+
+/* Import Google Fonts here. */
+@import url('https://fonts.googleapis.com/css?family=Anton|Biryani:300,400,700,900&display=swap');
+/* ----- Begin base styles for html tags ----- --- */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  /* set units here for future scaling with em and rem */ 
+  background: #ffffff;
+  color: white;
+  font-size: 1vw;
+  overflow: hidden;
+}
+
+body {
+  background: rgb(240, 240, 243);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(17, 17, 17, 0.979);
+  font-family: 'Biryani', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', sans-serif;
+  color:#353434;
+  line-height: 0.9em;
+  font-weight: 700;
+  /* font-family: 'Noto Serif JP', serif; */
+  text-transform: uppercase;
+}
+
+p {
+  /* color: rgb(121, 121, 124); */
+  line-height: 1.2em;
+  text-align: justify;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0em;
+}
+
+ol {
+  padding-left: 1em;
+}
+
+a, a:hover {
+  color: rgb(26, 161, 240);
+}
+/* ----- End base styles for html tags ----- ----- */
+
+
+/* ===== Begin Custom Classes ===== */
+.row {
+  margin-bottom: 1rem;
+}
+
+/* ----- Base button styling ----- */
+.btn {
+  transition-property: all;
+  transition-duration: 110ms;
+  -moz-transition-duration: 0.11s;
+  border-radius: 0;
+  padding: 0.3em;
+  margin-right: 1em;
+  font-weight: 500;
+  background: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  width: 8rem;
+  color: rgb(223, 223, 226);
+}
+
+/* ----- Base button focus styling ----- */
+/* ----- needed to remove the reactstrap focus - re-enable for accessibility ----- */
+.btn:focus {
+  outline: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/* ----- Base button hover styling ----- */
+.btn:hover {
+  cursor: pointer;
+  /* filter: invert(0.2); */
+  background: #222222;  
+  border: 1px solid #222222;
+  color: rgb(223, 223, 226);
+}
+
+/* ----- Generic base styling for pages (Routes) ----- */
+.page-wrapper {
+  padding: 8rem 1rem 6rem 1rem;
+  background: none;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+/* ===== End Custom Classes ===== */

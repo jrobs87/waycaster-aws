@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Biryani:300,400,700,900&display=swap');
+
+.logo {
+    position: fixed;
+    left: 4rem;
+    top: 2rem;
+    z-index: 4000;
+    /* font-family: 'Anton', sans-serif; */
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav-trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 100%; */
+    border: 1px solid rgb(0, 0, 0);
+    color:  rgb(0, 0, 0);
+    height: 3.5em;
+    width: 3.5em;
+    position: fixed;
+    z-index: 2000;
+    top: 1rem;
+    right: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 1200ms;
+    transition-timing-function: ease;
+    opacity: 1;
+    /* background-color: rgb(31, 30, 30); */
+    transition-delay: 600ms;
+    /* transform: rotate(-180deg); */
+}
+
+.nav-trigger.active {
+    opacity: 0.25;
+    transition-property: all;
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+    transition-delay: 0ms;
+    /* transition-duration: 1300ms; */
+    /* border: 1px solid rgb(197, 194, 194);
+    color: rgb(197, 194, 194); */
+    /* transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1); */
+}
+
+.nav-trigger_text {
+    /* font-family: 'Anton', sans-serif; */
+    position: absolute;
+    height: 1em;
+    /* letter-spacing: 0.05em; */
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    top: -0.05em;
+}
+
+.nav-trigger_text div {
+    font-size: 0.8rem;
+    transition-delay: 0ms;
+    transition-duration: 1200ms;
+    transform: translateY(0em);
+    transition-timing-function: ease;
+}
+
+.nav-trigger_text.active div {
+    transition-duration: 970ms;
+    transform: translateY(-1.88em);
+    
+}
+
+.menu-open {
+    padding: 0.15em;
+    opacity: 1;
+}
+
+.menu-open.active {
+    opacity: 0;
+    }
+
+.menu-close {
+    padding: 0.15em;
+    opacity: 0;
+}
+
+.menu-close.active {
+    opacity: 1;
+}
+
+.nav-modal-smooth {
+    pointer-events: none;
+    opacity: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 200;
+    background-color: rgb(255, 255, 255);
+    transition-timing-function: ease-in;
+    transition-property: opacity;
+    transition-delay:  200ms;
+    transition-duration: 1000ms;
+}
+
+.nav-modal-smooth.active {
+    transition-duration: 1600ms;
+    transition-delay: 0ms;
+    opacity: 0.25;
+    transition-timing-function: ease-in;
+}
+
+.nav-modal-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(190, 192, 192);
+    transition-timing-function: ease;
+    transition-property: opacity;
+    transition-delay: 200ms;
+    transition-duration: 800ms;
+    z-index: 200;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.nav-modal-inner.active {
+    transition-delay:  00ms;
+    transition-duration: 1600ms;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.nav-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.952);
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden !important;
+    transition-property: all;
+    transform: translateX(100vw);
+    transition: 800ms;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.175, 1);
+}
+
+.nav-content.active {
+    transition: 1800ms;
+    opacity: 1;
+    transform: translateX(0vw);
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    /* transform: rotate(90deg); */
+}
+
+.nav-elements {
+    position: absolute;
+    top: 20.4rem;
+    left: 1.4em;
+    opacity: 1;
+    font-size: 10rem;
+    font-weight: 900;
+    line-height: 0.8em;
+    transition-property: transform, opacity;
+   transform: translateX(-96vw);
+   transition-delay: 0ms, 0ms;
+   transition-duration: 800ms, 400ms;
+   transition-timing-function: cubic-bezier(0.33, 0, 0.175, 1), ease;
+}
+
+.nav-elements.active {
+    transition-property: transform, opacity;
+    transition-delay: 0ms, 600ms;
+    transition-duration: 1800ms, 600ms;
+    transform: translateX(0vw);
+    opacity: 1;
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.nav-elements div {
+    font-weight: 900;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: -0.03em;
+    line-height: 0.6em;
+    text-transform: uppercase;
+    transform: translateX(0em);
+    opacity: 1;
+    color: rgb(196, 195, 197);
+    cursor: pointer;
+    transition: 1300ms;
+}
+
+.nav-elements div:hover {
+    transition-duration: 300ms;
+    transform: translateX(0em);
+    opacity: 0.7;
+    /* letter-spacing: 0.01em; */
+    /* color: rgb(255, 253, 253); */
+}
+
+.nav-elements.active div {
+    transform: translateX(0em);
+    /* transition-duration: 300ms; */
+}
+
+.nav-elements p {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1em;
+    font-family: 'Biryani', sans-serif;
+    text-transform: uppercase;
+    text-align: right;
+    position: relative;
+    width: 40vw;
+    top:  -2em;
+    left: 14vw;
+    opacity: 1;
+    font-size: 0.8rem;
+    letter-spacing: -0.03em;
+    font-weight: 500 !important;
+    line-height: 1.18em;
+    margin: none;
+    color: rgb(54, 54, 54);
+    transition-property: transform, opacity;
+    transition-duration: 800ms, 400ms;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.175, 1);
+    transform: translateX(2vw);
+    pointer-events: none;
+}
+
+.nav-elements.active p {
+    transition-property: transform, opacity;
+    transform: translateX(0vw);
+    transition-duration: 1300ms, 1200ms;
+    transition-delay: 0ms, 400ms;
+    opacity: 1;
+    /* transform: translateX(0.6vw); */
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1), ease;
+    pointer-events: none;
+}
+
+.flex {
+    color: rgb(0, 0, 0);
+}
+
+
