@@ -10,6 +10,7 @@ import Home from './routes/1-Home';
 import Photography from './routes/2-Photography';
 import Contact from './routes/3-Contact';
 import FourOhFour from './routes/10-FourOhFour';
+import Sandbox from './routes/7-pageSandbox';
 
 // Import Components.
 import Nav from './components/Nav';
@@ -33,6 +34,7 @@ const App = (
             <Route exact path='/' component={Home} />
             <Route path='/photography' component={Photography} />
             <Route path='/contact' component={Contact} />
+            <Route path='/sandbox' component={Sandbox} />
             <Route component={FourOhFour} />
         </Switch>
     </Router>

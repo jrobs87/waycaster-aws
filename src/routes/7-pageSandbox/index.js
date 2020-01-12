@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, Row } from 'reactstrap';
+import ScrollTester from '../../components/ScrollPanel/ScrollTester';
 
 import './index.css';
 
@@ -23,20 +23,8 @@ export default class Sandbox extends React.Component {
 
     render() {
         return (
-            <section className="page-wrapper">
-                <Container>
-                    <Row>
-                        <Col>
-                            <h3>Component Class</h3>
-                            <p>Basic Stateful Component with a state bound to a click event.</p>
-                            <p>Current state: <strong>{this.state.data.toString()}</strong></p>
-                            <button onClick={this.load} className="btn">Load</button>
-                        </Col>
-                    </Row>
-                </Container>
-
-
-            </section>
+         <ScrollTester></ScrollTester>
         )
     }
 }
+

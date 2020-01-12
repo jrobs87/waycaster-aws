@@ -40,7 +40,7 @@
     transition-duration: 600ms;
     transition-timing-function: ease;
     transition-delay: 0ms;
-    /* transition-duration: 1300ms; */
+    /* transition-duration: 1800ms; */
     /* border: 1px solid rgb(197, 194, 194);
     color: rgb(197, 194, 194); */
     /* transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1); */
@@ -104,9 +104,9 @@
 }
 
 .nav-modal-smooth.active {
-    transition-duration: 1600ms;
+    transition-duration: 800ms;
     transition-delay: 0ms;
-    opacity: 0.25;
+    opacity: 0.4;
     transition-timing-function: ease-in;
 }
 
@@ -116,19 +116,19 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(190, 192, 192);
+    background-color: rgb(255, 255, 255);
     transition-timing-function: ease;
     transition-property: opacity;
     transition-delay: 200ms;
     transition-duration: 800ms;
     z-index: 200;
-    opacity: 0.6;
+    opacity: 1;
     pointer-events: none;
 }
 
 .nav-modal-inner.active {
     transition-delay:  00ms;
-    transition-duration: 1600ms;
+    transition-duration: 1100ms;
     opacity: 0;
     transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -139,7 +139,7 @@
     left: 0;
     z-index: 1000;
     opacity: 1;
-    background: rgba(255, 255, 255, 0.952);
+    background: #494849;
     padding: 0;
     width: 100vw;
     height: 100vh;
@@ -148,6 +148,7 @@
     transform: translateX(100vw);
     transition: 800ms;
     transition-timing-function: cubic-bezier(0.33, 0, 0.175, 1);
+    visibility: hidden;
 }
 
 .nav-content.active {
@@ -156,9 +157,11 @@
     transform: translateX(0vw);
     transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
     /* transform: rotate(90deg); */
+    visibility: visible;
 }
 
 .nav-elements {
+    visibility: inherit;
     position: absolute;
     top: 20.4rem;
     left: 1.4em;
@@ -169,17 +172,18 @@
     transition-property: transform, opacity;
    transform: translateX(-96vw);
    transition-delay: 0ms, 0ms;
-   transition-duration: 800ms, 400ms;
+   transition-duration: 800ms, 200ms;
    transition-timing-function: cubic-bezier(0.33, 0, 0.175, 1), ease;
 }
 
 .nav-elements.active {
     transition-property: transform, opacity;
-    transition-delay: 0ms, 600ms;
-    transition-duration: 1800ms, 600ms;
+    transition-delay: 0ms, 200ms;
+    transition-duration: 1800ms, 800ms;
     transform: translateX(0vw);
     opacity: 1;
     transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    visibility: inherit;
 }
 
 .nav-elements div {
@@ -190,9 +194,17 @@
     text-transform: uppercase;
     transform: translateX(0em);
     opacity: 1;
-    color: rgb(196, 195, 197);
+    color: rgb(255, 255, 255);
     cursor: pointer;
-    transition: 1300ms;
+    transition-duration: 1600ms;
+    visibility: hidden;
+}
+
+.nav-elements.active div {
+    transform: translateX(0em);
+    /* transition-duration: 300ms; */
+    visibility: visible;
+    transition-duration: 0ms;
 }
 
 .nav-elements div:hover {
@@ -201,12 +213,10 @@
     opacity: 0.7;
     /* letter-spacing: 0.01em; */
     /* color: rgb(255, 253, 253); */
+    visibility: visible;
 }
 
-.nav-elements.active div {
-    transform: translateX(0em);
-    /* transition-duration: 300ms; */
-}
+
 
 .nav-elements p {
     background-color: rgba(255, 255, 255, 0);
@@ -219,15 +229,15 @@
     top:  -2em;
     left: 14vw;
     opacity: 1;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: -0.03em;
     font-weight: 500 !important;
     line-height: 1.18em;
     margin: none;
-    color: rgb(54, 54, 54);
+    color: #f1b12b;
     transition-property: transform, opacity;
     transition-duration: 800ms, 400ms;
-    transition-timing-function: cubic-bezier(0.33, 0, 0.175, 1);
+    transition-timing-function: cubic-bezier(0.33, 0, 0.175, 1), ease;
     transform: translateX(2vw);
     pointer-events: none;
 }
@@ -235,7 +245,7 @@
 .nav-elements.active p {
     transition-property: transform, opacity;
     transform: translateX(0vw);
-    transition-duration: 1300ms, 1200ms;
+    transition-duration: 1800ms, 1200ms;
     transition-delay: 0ms, 400ms;
     opacity: 1;
     /* transform: translateX(0.6vw); */
@@ -247,4 +257,27 @@
     color: rgb(0, 0, 0);
 }
 
+.nav-modal-resize___OFF {
+    height: 300vh;
+    width: 300vw;
+    background-color: rgb(252, 36, 36);
+    z-index: 100;
+    position: fixed;
+    top: 00vh;
+    left: 0vw;
+    opacity: 0;
+    transition-duration: 0ms;
+    transition-delay: 0ms;
+    pointer-events: none;
+    /* transform: translateX(00vw);
+    transition-duration: 600ms;
+    transition-delay: 800ms;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.175, 1); */
+}
 
+.nav-modal-resize.active___OFF {
+    opacity: 1;
+    transition-delay: 1200ms;
+    transition-duration: 0ms;
+    /* transform: translateX(0vh); */
+}

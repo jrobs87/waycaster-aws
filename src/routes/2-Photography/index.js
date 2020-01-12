@@ -8,12 +8,17 @@ function RouteOne() {
 
     const style = {
         backgroundImage: 'url(' + img + ')',
-        height: '70vh',
+        // height: '70vh',
+        width: '50vw',
+        paddingTop: '50vw',
         backgroundPosition: 'bottom',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         // filter: 'grayscale(100%)'
-    
+        margin: 'auto',
+        transitionDuration: '1200ms',
+        transitionTimingFunction: 'ease'
+
     }
 
     return (
@@ -21,7 +26,7 @@ function RouteOne() {
             <Container>
                 <Row>
                     <Col lg={12}>
-                        <p style={{ fontSize: '0.8rem', textTransform: 'uppercase'}}>Shia Ridge - Calgary, Wyoming</p>
+                        <p style={{ fontSize: '1.1rem', fontWeight: 100,  textTransform: 'uppercase', margin: 'auto', width: '50vw', paddingBottom: '0.5rem'}}>Shia Ridge - Calgary, Wyoming</p>
                         <div style={style}></div>
                     </Col>
                 </Row>
